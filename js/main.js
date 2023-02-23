@@ -1,27 +1,36 @@
-var startX = 100; // posição x inicial
-var startY = 100; // posição y inicial
-var endX = 400; // posição x final
-var endY = 100; // posição y final
-var controlX = 250; // posição x do ponto de controle
-var controlY = 0; // posição y do ponto de controle
-
+var a = 1;
+var b = 100;
+var c = 1;
+var d =1;
 
 function draw() {
     var canvas = document.getElementById('canvas');
+    
     if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
   
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.beginPath();
-      ctx.moveTo(0 , 0 );
-      ctx.bezierCurveTo(400, 0, 0 , 1100, 600, 400 );
-      ctx.bezierCurveTo(1000, -200, 1280 , 0, 1300, 400 );
 
-        ctx.lineTo(1280, 720);
-        ctx.fill();
-  
+      ctx.moveTo(0, 500);
+      ctx.lineTo(0, 721);
+      ctx.lineTo(150, 721);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.fillStyle = "#c3f6d1";
+      ctx.moveTo(1280, 0);
+      ctx.lineTo(1280, 300);
+      ctx.lineTo(920, 0);
+      ctx.fill();
+
   }    }
 
-var duration = 2; // duração da animação em segundos
-var element = document.getElementById('canvas'); // elemento a ser animado
-var timeline = gsap.timeline(); // cria uma linha do tempo para a animação
-timeline.to(element, { duration: duration, motionPath: { path: bezierCurve } });
+  setInterval(anim,1)
+
+
+function anim(){
+
+
+  draw();
+  
+}

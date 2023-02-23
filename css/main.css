@@ -1,9 +1,11 @@
 *{
     margin:0px;   
+
 }
 body{
     display:flex; 
     flex-direction: column;
+    background-color: #91d1b0;
 
 }
 canvas{
@@ -14,12 +16,22 @@ canvas{
 
 }
 .title{
+    color: aliceblue;
     position: absolute;
     top: 50vh;
-    left: 50vw;
+    left: 30vw;
     margin-left: -120px;
     margin-top: -50px;
   
+}
+
+.headerThingy{
+    color: aliceblue;
+    position: absolute;
+    top: 50vh;
+    left: 85vw;
+    margin-left: -120px;
+    margin-top: -50px;
 }
 
 .box1{
